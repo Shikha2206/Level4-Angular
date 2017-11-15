@@ -1,0 +1,44 @@
+<div class="row" ng-controller="StatsController as thirdCtrl">
+            <div class="col-xs-12 col-md-12 col-lg-12" align="center">
+			<table class=table>
+          <tr><td>Enter Team Name:</td> <td><input type = "text" id="getTeamname" required ng-model="getTeamname" name="getTeamname"> </td>	 </tr> 
+         <tr><td> Enter Year     :</td><td>  <input type = "year" id="getYear" required   ng-model="getYear"  name="getYear" placeholder="2015-16 & 2016-17"></td></tr>
+		  </table>
+		  <input type="submit" value="SUBMIT" align="center" ng-click="thirdCtrl.statsCheck(getTeamname,getYear)">
+		      </div>
+                <div class="post-result" ng-controller="StatsController as thirdCtrl">
+                   <caption class="text-center">
+                   <h3>
+                   {{ getTeamname }} Analysis in {{getYear}}
+                   </h3>
+                  </caption>
+				  <div class="row stats-bg">
+		        <div class="col-xs-4 col-xs-offset-4" ng-if="thirdCtrl.">
+			    <img ng-src = "images/{{ statsCtrl.code1  }}.jpg" class="logo-team img-responsive">
+			    </div>
+				  <table>
+				  <thead>
+                  <tr>
+				  <th>Total Played Match</th>
+                  <th>Total Score</th>
+				  <th>Total Win</th>
+                  <th>Total Loss</th>
+				  <th>Total Draw</th>
+                  <th>Win Percentage</th>
+				  <th>Loss Percentage</th>
+                  </tr>
+                  </thead>
+                  
+                   <tr>
+        <td>{{thirdCtrl.playedmatches}}</td>
+		<td>{{thirdCtrl.score}}</td>
+		<td>{{thirdCtrl.wins}}</td>
+		<td>{{thirdCtrl.loss}}</td>
+		<td>{{thirdCtrl.drawn}}</td>
+		<td>{{thirdCtrl.winPercent}}</td>
+		<td>{{thirdCtrl.lossPercent}}</td>
+      </tr>
+   
+  </table>
+</div>
+</div>

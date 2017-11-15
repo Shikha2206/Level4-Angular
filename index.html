@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='mainApp'>
+<head>
+<title>English Premier League</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+<!-- Bootstrap Core CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ <!-- add styles -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<!--Main Content ---->
+<body style="background-image: url('images/home.gif')" id="intro-header">
+<header>
+<div class="wrap">
+ <!-- logo -->
+ <a href="#!"><img class="logo img-responsive" src="images/premier_logo.png" width="10%" height="100%" /></a>
+<!-- navigation menu -->
+<nav>
+<ul>
+<!--Link for SPA-->
+<li><a  ng-href="#/2015-16">2015-16</a></li>
+<li><a  ng-href="#/2016-17">2016-17</a></li>
+ <li><a ng-href="#/Stat">Statistics</a></li>                   
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- main content -->
+    <div style="position:relative">
+        <div ng-view></div>
+    </div>
+</body>
+<!-- Theme JavaScript -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+<script type="text/javascript" src="angular/app.js"></script>
+
+
+                                              <!-- CONTROLLERS   -->
+<script  src="angular/controller/First.js"></script>
+<script  src="angular/controller/Second.js"></script>
+<script  src="angular/controller/third.js"></script>
+ <!-- ROUTE FILE -->
+<script type="text/javascript" src="angular/routes.js"></script>
+</html>

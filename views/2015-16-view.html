@@ -1,0 +1,28 @@
+<div class="container" ng-controller='firstController as firstCtrl'>
+ <caption class="text-center">
+<h3 class="trophy">
+{{ firstCtrl.firstName }}
+</h3>
+</caption>
+<table class="table">
+ <thead>
+      <tr>
+        <th>Date</th>
+        <th>Match Details</th>
+        </tr>
+    </thead>
+    <tbody ng-repeat ="items in firstCtrl.data1">
+      <tr ng-repeat ="item in items.matches">
+        <td>{{item.date}}</td>
+        <td><table><tr><td>{{items.name}}</td></tr>
+		<tr><td>{{item.team1.name}} vs {{item.team2.name}}</td></tr>
+		<tr><td>{{item.score1}} - {{item.score2}}</td></tr>
+		<tr><td ng-if="item.score1 > item.score2"> {{item.team1.name}} Win By {{item.score1-item.score2}}</td></tr>
+		<tr><td ng-if="item.score1 < item.score2"> {{item.team2.name}} Win By {{item.score2-item.score1}}</td></tr>
+		<tr><td ng-if="item.score1 == item.score2">TIE</td></tr>
+		</table></td>
+		<td><table><tr><td><button type="button" class="btn btn-primary btn-md"><a ng-href="#/match/{{ item.team1.name }}/{{ item.team2.name }}/{{ item.date }}/{{ item.name }}">SUMMARY</a></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
