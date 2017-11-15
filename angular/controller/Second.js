@@ -1,4 +1,3 @@
-//var myApp = angular.module('premierApp', []);
 
 myApp.controller("secondController", ['$http','$location','$routeParams',function($http,$location,$routeParams)
 {
@@ -8,9 +7,11 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 	this.matchId1 = $routeParams.matchid1 ;
     this.matchId2 = $routeParams.matchid2 ;
     this.matchDate = $routeParams.matchdate ;
+	this.matchname = $routeParams.matchname ;
 	console.log("matchId1");
 	console.log("matchId2");
 	console.log("matchDate");
+	console.log("matchname");
 	this.team1;
     this.team2;
     this.score1;
@@ -19,6 +20,8 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
     this.date;
     this.day;
     this.rounds1 = [];
+	this.loadFirst();
+	this.loadSecond();
 	this.loadsingleData=function(data)
 	{
 		for(var i in data)
@@ -74,10 +77,8 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
           // called asynchronously if an error occurs
           // or server returns response with an error status.
           alert("some error occurred. Check the console.");
-           })
-		   this.loadFirst()//call first load Method
-	  }
-		    
+           });
+	  }    
         this.loadSecond = function(){
          $http({ 
             method: 'GET', 
@@ -92,7 +93,6 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
           // called asynchronously if an error occurs
           // or server returns response with an error status.
           alert("some error occurred. Check the console.");
-            })
-			this.loadSecond();  //call 2 load Method
+            });
               }
 }]);
