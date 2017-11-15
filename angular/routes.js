@@ -14,7 +14,7 @@ myApp.config(['$routeProvider', function($routeProvider){
         	controllerAs 	: 'firstCtrl'
         })
         .when("/match/:matchid1/:matchid2/:matchdate/:matchname",{
-			templateUrl     : 'views/Single-matchDetail.html',
+			templateUrl     : 'views/matchDetail.html',
         	controller 		: 'secondController',
         	controllerAs 	: 'secCtrl'
         })
