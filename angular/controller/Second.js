@@ -28,7 +28,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 		{
 			for(var j in main.data[i].matches)
 			{
-				if(main.data[i].matches.team1.name==main.matchId1 && main.data[i].matches.team2.name=main.matchId2 &&  main.data[i].matches.data==main.matchDate)
+				if(main.data[i].matches.team1.name == main.matchId1 && main.data[i].matches.team2.name==main.matchId2 &&  main.data[i].matches.data==main.matchDate)
 				{
 					console.log("Record_Found");
 					main.day=main.data[i].name;
