@@ -64,7 +64,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 				main.loadsingleData(response.data); 
 			  },function errorcallBack(reason)
 			  {
-				  alert("error in GET")
+				  alert("error in GET");
 				  
 			  }
 	  }
@@ -79,7 +79,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 				main.loadsingleData(response.data); 
 			  },function errorcallBack(reason)
 			  {
-				  alert("error in GET")
+				  alert("error in GET");
 				  
 			  }
 	  }
