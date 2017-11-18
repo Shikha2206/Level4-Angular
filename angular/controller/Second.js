@@ -66,7 +66,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 			  {
 				  alert("error in GET");
 				  
-			  }
+			  })
 	  }
 	  this.loadYear1();
 	  this.loadYear2=function()
@@ -81,7 +81,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 			  {
 				  alert("error in GET");
 				  
-			  }
+			  })
 	  }
 	  this.loadYear2();
 }]);
