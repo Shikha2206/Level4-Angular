@@ -61,7 +61,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 			  url:main.baseUrl
 			  }).then(function successCallback(response)
 			  {
-				main..loadsingleData(response.data); 
+				main.loadsingleData(response.data); 
 			  },function errorcallBack(reason)
 			  {
 				  alert("error in GET")
