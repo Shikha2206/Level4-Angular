@@ -1,4 +1,3 @@
-
 myApp.controller("secondController", ['$http','$location','$routeParams',function($http,$location,$routeParams)
 {
 	var main=this;
@@ -19,80 +18,75 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
     this.winner;
     this.date;
     this.day;
+	this.code1;
+	this.code2;
     this.rounds1 = [];
-	this.loadFirst();
-	this.loadSecond();
+	this.rounds2 =[];
 	this.loadsingleData=function(data)
 	{
-		for(var i in data)
+		for(var i in main.data)
 		{
-			for(var j in data[i].matches)
+			for(var j in main.data[i].matches)
 			{
-				if(matchId1==data[i].matches.team1.name && matchId2==data[i].matches.team2.name && matchDate == data[i].matches.data)
+				if(main.data[i].matches.team1.name==main.matchId1 && main.data[i].matches.team2.name=main.matchId2 &&  main.data[i].matches.data==main.matchDate)
 				{
-					main.team1=data[i].matches.team1.code1;
-					main.team2=data[i].matches.team2.code2;
-					if(data[i].matches.score1==data[i].matches.score2){
-						main.winner="Match Draw";
-					}
-					else if (data[i].matches.score1>data[i].matches.score2)
+					console.log("Record_Found");
+					main.day=main.data[i].name;
+					main.team1=main.data[i].matches[j].team1.name;
+					main.team2=main.data[i].mathes[j].team2.name;
+					main.score1=main.data[i].matches[j].team1.score1;
+					main.score2=main.data[i].matches[j].team2.score2;
+					main.date=main.data[i].matches[j].date;
+					main.code1=main.data[i].matches[j].team1.code1;
+					main.code2=main.data[i].matches[j].team1.code2;
+					if(main.score1=main.score2)
 					{
-						main.winner="main.team1" + Win;
+						main.winner="Match Drawn";
 					}
-					else
+					else if (main.score1>main.score2)
 					{
-						main.winner="main.team2" + Win;
-					}	
-				}
-				else (matchId==data[i].matches.team2.name && matchId1==data[i].matches.team1.name && matchDate == data[i].matches.data)
-				{
-					main.team2=data[i].matches.team2.code2;
-					main.team1=data[i].matches.team1.code1;
-					if(data[i].matches.score2==data[i].matches.score1){
-						main.winner="Match Draw";
+						main.winner= ""+main.team1+" wins !!!! and dominates over "+main.team2;
 					}
-					else if (data[i].matches.score2>data[i].matches.score1)
-					{
-						main.winner="main.team2" + Win;
+					else{
+						  main.winner = ""+main.team2+" wins!! and dominates over"+main.team1;  
 					}
-					else
-					{
-						main.winner="main.team1" + Win;
-					}	
 				}
 			}
 		}
 	}
-      this.loadFirst = function(){
-         $http({ 
-           method: 'GET', 
-           url: main.baseUrl 
-          }).then(function successCallback(response){
-          // this callback will be called asynchronously 
-          // when the response is available 
-          console.log(response); 
-		  main.data = response.data.rounds;
-          console.log(main.data);
-          }, function errorCallback(response) {
-          // called asynchronously if an error occurs
-          // or server returns response with an error status.
-          alert("some error occurred. Check the console.");
-           });
-	  }    
-        this.loadSecond = function(){
-         $http({ 
-            method: 'GET', 
-           url: main.baseUrl2
-         }).then(function successCallback(response){
-          // this callback will be called asynchronously 
-          // when the response is available 
-            console.log(response); 
-		    main.data = response.data.rounds;
-             console.log(main.data);
-          }, function errorCallback(response) {
-          // called asynchronously if an error occurs
-          // or server returns response with an error status.
-          alert("some error occurred. Check the console.");
-            });
-              }
+      this.loadYear1=function()
+	  {
+		  http({
+			  method:"GET",
+			  url:main.baseUrl
+			  }).then(function successCallback(response)
+			  {
+				main..loadsingleData(response.data); 
+			  },function errorcallBack(reason)
+			  {
+				  alert("error in GET")
+				  
+			  }
+	  }
+	  this.loadYear1();
+	  this.loadYear2=function()
+	  {
+		  http({
+			  method:"GET",
+			  url:main.baseUrl2
+			  }).then(function successCallback(response)
+			  {
+				main.loadsingleData(response.data); 
+			  },function errorcallBack(reason)
+			  {
+				  alert("error in GET")
+				  
+			  }
+	  }
+	  this.loadYear2();
 }]);
+
+
+
+        
+
