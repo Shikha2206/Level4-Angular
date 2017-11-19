@@ -44,7 +44,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 					console.log(main.data[i].matches[j].team2.score2);
 					console.log(main.score2);
 					main.date=main.data[i].matches[j].date;
-					console.log(main.data[i].matches[j].date;);
+					console.log(main.data[i].matches[j].date);
 					console.log(main.date);
 					main.code1=main.data[i].matches[j].team1.code1;
 					console.log(main.data[i].matches[j].team1.code1);
