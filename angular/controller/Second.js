@@ -46,11 +46,11 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 					main.date=main.data[i].matches[j].date;
 					console.log(main.data[i].matches[j].date);
 					console.log(main.date);
-					main.code1=main.data[i].matches[j].code1;
-					console.log(main.data[i].matches[j].code1);
+					main.code1=main.data[i].matches[j].team1.code;
+					console.log(main.data[i].matches[j].team1.code);
 					console.log(main.code1);
-					main.code2=main.data[i].matches[j].code2;
-					console.log(main.data[i].matches[j].code2);
+					main.code2=main.data[i].matches[j].team2.code;
+					console.log(main.data[i].matches[j].team2.code);
 					console.log(main.code2);
 					if(main.score1=main.score2)
 					{
