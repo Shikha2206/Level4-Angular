@@ -37,20 +37,20 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 					main.team2=main.data[i].matches[j].team2.name;
 					console.log(main.team2);
 					console.log(main.data[i].matches[j].team2.name);
-					main.score1=main.data[i].matches[j].team1.score1;
+					main.score1=main.data[i].matches[j].score1;
 					console.log(main.score1);
-					console.log(main.data[i].matches[j].team1.score1);
-					main.score2=main.data[i].matches[j].team2.score2;
-					console.log(main.data[i].matches[j].team2.score2);
+					console.log(main.data[i].matches[j].score1);
+					main.score2=main.data[i].matches[j].score2;
+					console.log(main.data[i].matches[j].score2);
 					console.log(main.score2);
 					main.date=main.data[i].matches[j].date;
 					console.log(main.data[i].matches[j].date);
 					console.log(main.date);
-					main.code1=main.data[i].matches[j].team1.code1;
-					console.log(main.data[i].matches[j].team1.code1);
+					main.code1=main.data[i].matches[j].code1;
+					console.log(main.data[i].matches[j].code1);
 					console.log(main.code1);
-					main.code2=main.data[i].matches[j].team1.code2;
-					console.log(main.data[i].matches[j].team1.code2);
+					main.code2=main.data[i].matches[j].code2;
+					console.log(main.data[i].matches[j].code2);
 					console.log(main.code2);
 					if(main.score1=main.score2)
 					{
