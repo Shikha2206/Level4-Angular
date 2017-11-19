@@ -25,7 +25,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 		{
 			for(var j in main.data[i].matches)
 			{
-				if(main.data[i].matches.team1.name == main.matchId1 && main.data[i].matches.team2.name==main.matchId2 &&  main.data[i].matches.data==main.matchDate)
+				if(main.data[i].matches[j].team1.name == main.matchId1 && main.data[i].matches[j].team2.name==main.matchId2 &&  main.data[i].matches[j].date==main.matchDate)
 				{
 					console.log("Record_Found");
 					main.day=main.data[i].name;
@@ -44,7 +44,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 					{
 						main.winner= ""+main.team1+" wins !!!! and dominates over "+main.team2;
 					}
-					else{
+						else{
 						  main.winner = ""+main.team2+" wins!! and dominates over"+main.team1;  
 					}
 				}
