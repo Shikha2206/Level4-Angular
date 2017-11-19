@@ -13,7 +13,7 @@ myApp.config(['$routeProvider', function($routeProvider){
         	controller 		: 'firstController',
         	controllerAs 	: 'firstCtrl'
         })
-        .when("/match/:matchid1/:matchid2/:matchdate/:matchname",{
+        .when("/match/:matchid1/:matchid2/:matchdate/",{
 			templateUrl     : 'views/matchDetail.html',
         	controller 		: 'secondController',
         	controllerAs 	: 'secCtrl'

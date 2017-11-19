@@ -21,7 +21,7 @@
 		<tr><td ng-if="item.score1 < item.score2"> {{item.team2.name}} Win By {{item.score2-item.score1}}</td></tr>
 		<tr><td ng-if="item.score1 == item.score2">TIE</td></tr>
 		</table></td>
-		<td><table><tr><td><button type="button" class="btn btn-primary btn-md"><a ng-href="#/match/{{ item.team1.name }}/{{ item.team2.name }}/{{ item.date }}/{{ item.name }}">SUMMARY</a></button></td>
+		<td><table><tr><td><button type="button" class="btn btn-primary btn-md"><a ng-href="#/match/{{ item.team1.name }}/{{ item.team2.name }}/{{ item.date }}">SUMMARY</a></button></td>
       </tr>
     </tbody>
   </table>
