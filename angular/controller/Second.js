@@ -30,7 +30,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 					console.log("Record_Found");
 					main.day=main.data[i].name;
 					main.team1=main.data[i].matches[j].team1.name;
-					main.team2=main.data[i].mathes[j].team2.name;
+					main.team2=main.data[i].matheses[j].team2.name;
 					main.score1=main.data[i].matches[j].team1.score1;
 					main.score2=main.data[i].matches[j].team2.score2;
 					main.date=main.data[i].matches[j].date;

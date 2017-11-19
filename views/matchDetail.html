@@ -5,31 +5,25 @@
                 
               </div>
                 <div class="post-preview">
-                    <p>   
-                    {{secCtrl.team1}} </p>
+                    <p>{{secCtrl.team1}} </p>
+					<p>{{secCtrl.code1}} </p>
                     <p>GOAL:{{secCtrl.score1}}</p>
                 </div>
-				<div class="post-preview">
-                    <div class="post-preview">
 					<div class="col-xs-12 col-md-6 col-lg-6">
             <img ng-src = "images/{{ secCtrl.team2 }}.jpg" class="img-responsive logo-team">
-                    <p>
-                        
-                        {{secCtrl.team2}}
-
-                    </p>
+			</div>
+			<div class="post-preview">
+                    <p>{{secCtrl.team2}</p>
+					<p>{{secCtrl.code2}} </p>
                     <p>GOAL:{{secCtrl.score2}}</p>
                 </div>
                 
               <div class="col-xs-12 col-md-12 col-lg-12">			
                 <h1>{{secCtrl.winner}}</h1>
               </div>
-             
-                <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
                         <a href="#/2015-16">Back to table &rarr;</a>
                     </li>
                 </ul>
-            </div>
 </div>
