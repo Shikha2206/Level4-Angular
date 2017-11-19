@@ -14,11 +14,11 @@ myApp.controller('firstController',['$http',function($http){
       }).then(function successCallback(response){
           // this callback will be called asynchronously 
           // when the response is available 
-          console.log(response); 
+          //console.log(response); 
 		  main.firstName=response.data.name;
-		  console.log(main.firstName);
+		  //console.log(main.firstName);
 		  main.data1 = response.data.rounds;
-          console.log(main.data1);
+          //console.log(main.data1);
 }, function errorCallback(response) {
           // called asynchronously if an error occurs
           // or server returns response with an error status.
@@ -33,11 +33,11 @@ myApp.controller('firstController',['$http',function($http){
       }).then(function successCallback(response){
           // this callback will be called asynchronously 
           // when the response is available 
-          console.log(response); 
+          //console.log(response); 
 		  main.firstName=response.data.name;
-		  console.log(main.firstName);
+		  //console.log(main.firstName);
 		  main.data2 = response.data.rounds;
-          console.log(main.data2);
+          //console.log(main.data2);
 }, function errorCallback(response) {
           // called asynchronously if an error occurs
           // or server returns response with an error status.

@@ -29,23 +29,34 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 				{
 					console.log("Record_Found");
 					main.day=main.data[i].name;
+					console.log(main.day);
 					main.team1=main.data[i].matches[j].team1.name;
+					console.log(main.team1);
 					main.team2=main.data[i].matheses[j].team2.name;
+					console.log(main.team2);
 					main.score1=main.data[i].matches[j].team1.score1;
+					console.log(main.score1);
 					main.score2=main.data[i].matches[j].team2.score2;
+					console.log(main.score2);
 					main.date=main.data[i].matches[j].date;
+					console.log(main.date);
 					main.code1=main.data[i].matches[j].team1.code1;
+					console.log(main.code);
 					main.code2=main.data[i].matches[j].team1.code2;
+					console.log(main.code2);
 					if(main.score1=main.score2)
 					{
 						main.winner="Match Drawn";
+						console.log(main.winner);
 					}
 					else if (main.score1>main.score2)
 					{
 						main.winner= ""+main.team1+" wins !!!! and dominates over "+main.team2;
+						console.log(main.winner);
 					}
 						else{
-						  main.winner = ""+main.team2+" wins!! and dominates over"+main.team1;  
+						  main.winner = ""+main.team2+" wins!! and dominates over"+main.team1;
+                         console.log(main.winner);						  
 					}
 				}
 			}
