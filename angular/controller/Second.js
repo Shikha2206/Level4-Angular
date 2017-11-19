@@ -18,8 +18,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
     this.day;
 	this.code1;
 	this.code2;
-    this.rounds1 = [];
-	this.rounds2 =[];
+    this.data = [];
 	this.loadsingleData=function(data)
 	{
 		for(var i in main.data)
@@ -60,7 +59,8 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 			  }).then(function successCallback(response)
 			  {
 				  console.log("working");
-				main.loadsingleData(response.data); 
+				  main.data = response.data.rounds;
+				main.loadsingleData(main.data); 
 			  },function errorcallBack(reason)
 			  {
 				  alert("error in GET");
@@ -76,7 +76,8 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 			  }).then(function successCallback(response)
 			  {  
 			    console.log("working");
-				main.loadsingleData(response.data); 
+				 main.data = response.data.rounds;
+				main.loadsingleData(main.data); 
 			  },function errorcallBack(reason)
 			  {
 				  alert("error in GET");
