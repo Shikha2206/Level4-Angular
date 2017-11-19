@@ -6,10 +6,9 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 	this.matchId1 = $routeParams.matchid1 ;
     this.matchId2 = $routeParams.matchid2 ;
     this.matchDate = $routeParams.matchdate ;
-	this.matchname = $routeParams.matchname ;
-	console.log(matchId1);
-	console.log(matchId2);
-	console.log(matchDate);
+	console.log(main.matchId1);
+	console.log(main.matchId2);
+	console.log(main.matchDate);
 	this.team1;
     this.team2;
     this.score1;
@@ -60,6 +59,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 			  url:main.baseUrl
 			  }).then(function successCallback(response)
 			  {
+				  console.log("working");
 				main.loadsingleData(response.data); 
 			  },function errorcallBack(reason)
 			  {
@@ -74,7 +74,8 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 			  method:"GET",
 			  url:main.baseUrl2
 			  }).then(function successCallback(response)
-			  {
+			  {  
+			    console.log("working");
 				main.loadsingleData(response.data); 
 			  },function errorcallBack(reason)
 			  {
