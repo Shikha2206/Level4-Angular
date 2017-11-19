@@ -7,10 +7,9 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
     this.matchId2 = $routeParams.matchid2 ;
     this.matchDate = $routeParams.matchdate ;
 	this.matchname = $routeParams.matchname ;
-	console.log("matchId1");
-	console.log("matchId2");
-	console.log("matchDate");
-	console.log("matchname");
+	console.log(matchId1);
+	console.log(matchId2);
+	console.log(matchDate);
 	this.team1;
     this.team2;
     this.score1;
@@ -68,7 +67,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 				  
 			  })
 	  }
-	  this.loadYear1();
+	  this.loadYear1()
 	  this.loadYear2=function()
 	  {
 		  http({
