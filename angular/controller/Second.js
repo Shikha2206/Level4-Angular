@@ -54,7 +54,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 	}
       this.loadYear1=function()
 	  {
-		  http({
+		  $http({
 			  method:"GET",
 			  url:main.baseUrl
 			  }).then(function successCallback(response)
@@ -70,7 +70,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 	  this.loadYear1()
 	  this.loadYear2=function()
 	  {
-		  http({
+		  $http({
 			  method:"GET",
 			  url:main.baseUrl2
 			  }).then(function successCallback(response)
