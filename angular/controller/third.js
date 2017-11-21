@@ -5,19 +5,21 @@ myApp.controller("StatsController",["$http",function($http){
 
       this.baseUrl1 = "https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.json";
       this.baseUrl2 = "https://raw.githubusercontent.com/openfootball/football.json/master/2016-17/en.1.json";
-
-
-       this.data1=0;
-	   this.year1=0;
+      this.data1=0;
+	  this.year1=0;
       this.rounds1 = [];
-      this.totalMatches={};
       this.code1;
-
+	  this.playedmatches;
+	  this.win;
+	  this.tie;
+	  this.loss;
+	  this.winPercent;
+	  this.lossPercent;
           this.teamStats = function(response,data1){ 
            
            main.rounds1 = response.data.rounds; 
 
-               //    console.log(data1)
+                 console.log(data1)
 
                 var playedmatches = 0 ;  var wins= 0; var loss = 0; var drawn = 0;
                  var totalscore = 0; var code1;
@@ -82,13 +84,13 @@ myApp.controller("StatsController",["$http",function($http){
                    
 
                   main.code1= code1;
-                  main.totalMatches.playedmatches = playedmatches;
-                  main.totalMatches.totalscore = totalscore;
-                  main.totalMatches.loss = loss;
-                  main.totalMatches.wins = wins;
-                  main.totalMatches.drawn = drawn;
-                  main.totalMatches.winPercent = ((wins/matches)*100).toFixed(2);
-                  main.totalMatches.lossPercent = ((loss/matches)*100).toFixed(2);
+                  main.playedmatches = playedmatches;
+                  main.totalscore = totalscore;
+                  main.loss = loss;
+                  main.wins = wins;
+                  main.drawn = drawn;
+                  main.winPercent = ((wins/playedmatches)*100).toFixed(2);
+                  main.lossPercent = ((loss/playedmatches)*100).toFixed(2);
           };
 
 
