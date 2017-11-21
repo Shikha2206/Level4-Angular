@@ -141,4 +141,5 @@ myApp.controller("StatsController",["$http",function($http){
 				}
 		   })
 		   }
-        }]); // controller ends
+        }
+}]); // controller ends

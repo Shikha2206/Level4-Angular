@@ -21,7 +21,7 @@ myApp.config(['$routeProvider', function($routeProvider){
 		 .when("/Stat",{
               templateUrl : 'views/Statictics.html',
               controller : "StatsController",
-              controllerAs : "statsCtrl"
+              controllerAs : "thirdCtrl"
            })
         .otherwise(
             {
