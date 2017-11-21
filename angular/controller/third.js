@@ -10,6 +10,7 @@ myApp.controller("StatsController",["$http",function($http){
       this.rounds1 = [];
       this.code1;
 	  this.playedmatches;
+	  this.score;
 	  this.win;
 	  this.tie;
 	  this.loss;
@@ -85,7 +86,7 @@ myApp.controller("StatsController",["$http",function($http){
 
                   main.code1= code1;
                   main.playedmatches = playedmatches;
-                  main.totalscore = totalscore;
+                  main.score = totalscore;
                   main.loss = loss;
                   main.wins = wins;
                   main.drawn = drawn;
