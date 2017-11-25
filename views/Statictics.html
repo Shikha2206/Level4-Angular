@@ -1,5 +1,5 @@
-<div class="row" ng-controller="StatsController as thirdCtrl">
-            <div class="col-xs-12 col-md-12 col-lg-12" align="center">
+<div class="container" ng-controller="StatsController as thirdCtrl">
+            <div class="col-lg-12" align="center">
 			<table class=table>
           <tr><td>Enter Team Name:</td> <td><input type = "text" id="getTeamname" required ng-model="getTeamname" name="getTeamname"> </td>	 </tr> 
          <tr><td> Enter Year     :</td><td>  <input type = "year" id="getYear" required   ng-model="getYear"  name="getYear" placeholder="2015-16 & 2016-17"></td></tr>
@@ -12,7 +12,7 @@
                    {{ getTeamname }} Analysis in {{getYear}}
                    </h3>
                   </caption>
-				  <div class="row stats-bg">
+				  <div class="container">
 		        <div class="col-xs-4 col-xs-offset-4">
 			    <img ng-src = "images/{{ getTeamname  }}.jpg" class="logo-team img-responsive">
 			    </div>
