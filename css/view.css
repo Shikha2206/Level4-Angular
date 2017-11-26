@@ -9,6 +9,19 @@ font-size:3.5em;
 font-weight:100;
 text-align:center;
 }
-a  {
+a{
  text-align:none;
+}
+.table > thead > tr > th {
+    vertical-align: middle;
+    height: 50px;
+	text-align: center;
+	font-size: 1.2em;
+}
+.table td {
+	text-align: center;
+	color: ghostwhite;
+	 vertical-align: middle !important;
+	font-weight: 300;
+	font-size: 1.2em;
 }
