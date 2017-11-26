@@ -18,3 +18,7 @@ text-align:center;
 img{
 text-align:center;
 }
+td,th,tr,tbody
+{
+padding:4em;
+}
