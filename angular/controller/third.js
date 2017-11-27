@@ -109,7 +109,15 @@ myApp.controller("StatsController",["$http",function($http){
 		   {
 			   alert("Please enter all details");
 		   }
-		   else if( year1 == "2015")
+		   else if(data1="" || year1!="")
+		   {
+			   alert("Please enter Teamname");
+		   }
+		    else if(data1!="" || year1="")
+		   {
+			   alert("Please enter Year");
+		   }
+		   else if( year1 == "2015" || data1!="")
 		   {
 			   $http({
                     method:"GET",
@@ -128,7 +136,7 @@ myApp.controller("StatsController",["$http",function($http){
 				}
 		   })
 		   }
-		   else if( year1 == "2016")
+		   else if( year1 == "2016" || data1!="")
 		   {
 			   $http({
                     method:"GET",
