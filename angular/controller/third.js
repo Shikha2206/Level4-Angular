@@ -101,14 +101,6 @@ myApp.controller("StatsController",["$http",function($http){
 		   {
 			   alert("Please enter mentioned details");
 		   }
-		   else if( year1 == "")
-		   {
-			  alert("Please enter all details"); 
-		   }
-		   else if( data1 == "")
-		   {
-			   alert("Please enter all details");
-		   }
 		   else if(data1="" || year1!="")
 		   {
 			   alert("Please enter Teamname");
