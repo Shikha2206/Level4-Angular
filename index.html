@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en" ng-app='mainApp'>
 <head>
-<title>English Premier League</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta charset="utf-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Bootstrap Core CSS -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <!-- add styles -->
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/view.css" rel="stylesheet" type="text/css" />
+  <title>EPL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="css/EPL.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<!--Main Content ---->
 <body style="background-image: url('images/home.gif')" id="intro-header">
-<header>
-<div class="wrap">
- <!-- logo -->
- <a href="#!"><img class="logo img-responsive" src="images/premier_logo.png" width="10%" height="100%" /></a>
-<!-- navigation menu -->
-<nav>
-<ul>
-<!--Link for SPA-->
-<li><a  ng-href="#/2015-16">2015-16</a></li>
-<li><a  ng-href="#/2016-17">2016-17</a></li>
- <li><a ng-href="#/Stat">Statistics</a></li>                   
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- main content -->
-    <div style="position:relative">
-        <div ng-view></div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Premier League</a>
     </div>
-</body>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#/2015-16">2015-16</a></li>
+        <li><a href="#/2016-17">2016-17</a></li>
+        <li><a href="#/Stat">Statistics</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+	<img class="logo img-responsive" src="images/premier_logo.png" />
+    </div>
+    <div class="col-sm-8 text-left"> 
+	 <div ng-view></div>
+    </div>
+    <div class="col-sm-2 sidenav">
+     	<img class="logo img-responsive" src="images/logo.gif" /> 
+      </div>
+    </div>
+  </div>
+</div>
+ <footer class="container-fluid text-center" style="background-color: darkgray;padding: 5px;">
+ <h3 class="text-center text-muted"> &copy;Premier - league  </h3>
+</footer>
 <!-- Latest compiled JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
@@ -47,4 +60,5 @@
 <script  src="angular/controller/third.js"></script>
  <!-- ROUTE FILE -->
 <script type="text/javascript" src="angular/routes.js"></script>
+</body>
 </html>
