@@ -34,7 +34,7 @@ myApp.controller('firstController',['$http',function($http){
           // this callback will be called asynchronously 
           // when the response is available 
           //console.log(response); 
-		  main.firstName=response.data.name;
+		  main.secondName=response.data.name;
 		  //console.log(main.firstName);
 		  main.data2 = response.data.rounds;
           //console.log(main.data2);
