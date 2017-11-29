@@ -25,8 +25,7 @@ myApp.config(['$routeProvider', function($routeProvider){
            })
         .otherwise(
             {
-                //redirectTo:'/'
-                template   : '<h1>404 page not found</h1>'
+                redirectTo:'/'
             }
         );
 }]);
