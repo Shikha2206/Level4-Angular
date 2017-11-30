@@ -16,7 +16,6 @@ myApp.controller("StatsController",["$http",function($http){
 	  this.loss;
 	  this.winPercent;
 	  this.lossPercent;
-	  this.teamname=0;
           this.teamStats = function(response,data1){ 
            
            main.rounds1 = response.data.rounds; 
@@ -24,7 +23,7 @@ myApp.controller("StatsController",["$http",function($http){
                  console.log(data1)
 
                 var playedmatches = 0 ;  var wins= 0; var loss = 0; var drawn = 0;
-                 var totalscore = 0; var code1;var teamname;
+                 var totalscore = 0; var code1;
 
               for(var i in main.rounds1){
 
@@ -33,7 +32,7 @@ myApp.controller("StatsController",["$http",function($http){
                     if (main.rounds1[i].matches[j].team1.name == data1){
                       
                        code1 = main.rounds1[i].matches[j].team1.code;
-                        teamname=main.rounds[i].matches[j].team1.name;
+
                        playedmatches++ ; 
 
                       totalscore += main.rounds1[i].matches[j].score1 ;
@@ -58,7 +57,7 @@ myApp.controller("StatsController",["$http",function($http){
                     else if(main.rounds1[i].matches[j].team2.name == data1){
 
                        code1 = main.rounds1[i].matches[j].team2.code ;
-                      teamname=main.rounds1[i].matches[j].team2.name;
+                      
                        playedmatches++ ;
 
                        totalscore += main.rounds1[i].matches[j].score2 ;
@@ -84,7 +83,7 @@ myApp.controller("StatsController",["$http",function($http){
 
 
                    
-                  main.teamname=teamname;
+
                   main.code1= code1;
                   main.playedmatches = playedmatches;
                   main.score = totalscore;
@@ -101,15 +100,11 @@ myApp.controller("StatsController",["$http",function($http){
 		   {
 			   alert("Please enter mentioned details");
 		   }
-		   else if(data1="" || year1!="")
+		   else if(data1=="" || year1 == "")
 		   {
-			   alert("Please enter Teamname");
+			  alert("Please enter all details"); 
 		   }
-		    else if(data1!="" || year1="")
-		   {
-			   alert("Please enter Year");
-		   }
-		   else if( year1 == "2015" || data1!="")
+		   else if( year1 == "2015")
 		   {
 			   $http({
                     method:"GET",
@@ -128,7 +123,7 @@ myApp.controller("StatsController",["$http",function($http){
 				}
 		   })
 		   }
-		   else if( year1 == "2016" || data1!="")
+		   else if( year1 == "2016")
 		   {
 			   $http({
                     method:"GET",

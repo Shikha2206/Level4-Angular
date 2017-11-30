@@ -1,20 +1,20 @@
-<div class="container" ng-controller="StatsController as thirdCtrl">
-            <div class="col-lg-12" align="center">
+<div class="row" ng-controller="StatsController as thirdCtrl">
+            <div  align="center">
 			<table class=table>
           <tr><td>Enter Team Name:</td> <td><input type = "text" id="getTeamname" required ng-model="getTeamname" name="getTeamname"> </td>	 </tr> 
          <tr><td> Enter Year     :</td><td>  <input type = "year" id="getYear" required   ng-model="getYear"  name="getYear" placeholder="2015-16 & 2016-17"></td></tr>
 		  </table>
 		  <input type="submit" value="SUBMIT" align="center" ng-click="thirdCtrl.statsCheck(getTeamname,getYear)">
 		      </div>
-                <div class="post-result co-lg-12" ng-show>
+                <div class="post-result">
                    <caption class="text-center">
                    <h3>
                    {{ getTeamname }} Analysis in {{getYear}}
                    </h3>
                   </caption>
-				  <div class="container">
-		        <div class="col-lg-12">
-			    <img ng-src = "images/{{ getTeamname  }}.jpg" class="logo-team img-responsive">
+				  <div class="row stats-bg">
+		        <div class="col-xs-4 col-xs-offset-4">
+			    <img ng-src = "img/{{ getTeamname  }}.jpg" class="logo-team img-responsive">
 			    </div>
 				  <table>
 				  <thead>
