@@ -39,3 +39,8 @@
 h1{
 text-align:center
 }
+body
+{
+overflow-x: hidden;
+overflow-y: scroll;
+}

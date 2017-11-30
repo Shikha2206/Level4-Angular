@@ -101,15 +101,15 @@ myApp.controller("StatsController",["$http",function($http){
 		   {
 			   alert("Please enter mentioned details");
 		   }
-		   else if(data1="" && year1!="")
+		   else if(data1="" || year1!="")
 		   {
 			   alert("Please enter Teamname");
 		   }
-		    else if(data1!="" && year1="")
+		    else if(data1!="" || year1="")
 		   {
 			   alert("Please enter Year");
 		   }
-		   else if( year1 == "2015" && data1!="")
+		   else if( year1 == "2015" || data1!="")
 		   {
 			   $http({
                     method:"GET",
@@ -128,7 +128,7 @@ myApp.controller("StatsController",["$http",function($http){
 				}
 		   })
 		   }
-		   else if( year1 == "2016" && data1!="")
+		   else if( year1 == "2016" || data1!="")
 		   {
 			   $http({
                     method:"GET",
@@ -140,7 +140,7 @@ myApp.controller("StatsController",["$http",function($http){
 					this.names1.push(response.data.rounds[0].matches[i].team1.name)
 				}
 				{
-					if(this.name1.includes(data1))
+					if(this.names1.includes(data1))
 					{
 						main.teamStats(response,data1)
 					}
