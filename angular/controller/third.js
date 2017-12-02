@@ -16,6 +16,7 @@ myApp.controller("StatsController",["$http",function($http){
 	  this.loss;
 	  this.winPercent;
 	  this.lossPercent;
+	  this.value=false;
           this.teamStats = function(response,data1){ 
            
            main.rounds1 = response.data.rounds; 
@@ -100,11 +101,11 @@ myApp.controller("StatsController",["$http",function($http){
 		   {
 			   alert("Please enter mentioned details");
 		   }
-		   else if(data1==""&& year1!="")
+		   else if(data1== ""&& year1!=="")
 		   {
 			  alert("Please enter Team details"); 
 		   }
-		   else if(data1!==""&& year1="")
+		   else if(data1! == "" && year1=="")
 		   {
 			  alert("Please enter Year details"); 
 		   }
