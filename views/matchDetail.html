@@ -2,10 +2,10 @@
 <div class="row content">
 <h1>{{secCtrl.day}}</h1>
             <div class=" col-lg-6" >
-            <img ng-src = "images/{{ secCtrl.code1 || lowercase }}.png"   class="img-responsive logo-team">			    
+            <img ng-src = "images/{{ secCtrl.code1 | lowercase }}.png"   class="img-responsive logo-team">			    
             </div>
             <div class="col-lg-6">
-            <img ng-src = "images/{{ secCtrl.code2 || lowercase }}.png"   class="img-responsive logo-team">
+            <img ng-src = "images/{{ secCtrl.code2 | lowercase }}.png"   class="img-responsive logo-team">
 			</div>
 			<div class="post-preview col-lg-6">
                <p> Teamname :{{secCtrl.team1}} </p>
