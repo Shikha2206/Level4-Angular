@@ -53,7 +53,7 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 					main.code2=main.data[i].matches[j].team2.code;
 					//console.log(main.data[i].matches[j].team2.code);
 					//console.log(main.code2);
-					if(main.score1=main.score2)
+					if(main.score1 == main.score2)
 					{
 						main.winner="Match Drawn";
 						//console.log(main.winner);
