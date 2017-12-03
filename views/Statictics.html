@@ -7,7 +7,7 @@
 		  <input type="submit" value="SUBMIT" align="center" ng-click="thirdCtrl.statsCheck(getTeamname,getYear)">
 		  <button ng-click="reset()">RESET</button>
 		      </div>
-                <div class="post-result" ng-if="submitted=true">
+                <div class="post-result" ng-if="submit=true">
                    <caption class="text-center">
                    <h3>
                    {{ getTeamname }} Analysis in {{getYear}}
@@ -15,7 +15,7 @@
                   </caption>
 				  <div class="row stats-bg">
 		        <div class="col-xs-4 col-xs-offset-4">
-			    <img ng-src = "img/{{ code1 | lowercase  }}.png" class="logo-team img-responsive">
+			    <img ng-src = "images/{{ code1 | lowercase  }}.png" class="logo-team img-responsive">
 			    </div>
 				  <table>
 				  <thead>
