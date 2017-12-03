@@ -97,17 +97,13 @@ myApp.controller("StatsController",["$http",function($http){
 
 
            this.statsCheck = function(data1,year1){ 
-           if(data1== "" && year1 == " ")
+           if(data1== null)
 		   {
 			   alert("Please enter mentioned details");
 		   }
-		   else if(data1== ""&& year1!=="")
+		   else if(year1==null)
 		   {
 			  alert("Please enter Team details"); 
-		   }
-		   else if(data1! == "" && year1=="")
-		   {
-			  alert("Please enter Year details"); 
 		   }
 		   else if( year1 == "2015")
 		   {
