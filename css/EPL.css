@@ -36,7 +36,7 @@
   -o-background-size: cover;
   margin-bottom: 50px;
 }
-h1{
+h1,h3{
 text-align:center
 }
 body
@@ -45,6 +45,6 @@ overflow-x: hidden;
 overflow-y: scroll;
 }
 .logo-team{
-	width: 250px; 
-	height: 250px;
+	width: 200px; 
+	height: 200px;
 }
