@@ -6,16 +6,17 @@
 		  </table>
 		  <input type="submit" value="SUBMIT" align="center"  ng-click="thirdCtrl.statsCheck(getTeamname,getYear)">
 		      </div>
-                <div class="post-result" ng-if="getTeamname && getYear">
+                <div class="col-lg-12" ng-if="getTeamname && getYear">
                    <caption class="text-center">
                    <h3>
-                   {{ getTeamname }} Analysis in {{getYear}}
+                  STAT ANALYSIS 
                    </h3>
                   </caption>
-				  <div class="row stats-bg">
-		        <div class="col-xs-4 col-xs-offset-4">
-			    <img ng-src = "images/{{ code1 | lowercase  }}.png" class="logo-team img-responsive">
+				  </div>
+		        <div class="col-lg-12">
+			    <img ng-src = "images/{{ code1 | lowercase  }}.png"  style="align:center" class="logo-team img-responsive">
 			    </div>
+				 <div class="row stats-bg col-lg-12">
 				  <table>
 				  <thead>
                   <tr>
