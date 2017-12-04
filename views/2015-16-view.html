@@ -21,8 +21,8 @@
         <th>Match Details</th>
         </tr>
     </thead>
-    <tbody ng-repeat ="items in firstCtrl.data1 | selectedItem">
-      <tr ng-repeat ="item in items.matches | selectedSubItem">
+    <tbody ng-repeat ="items in firstCtrl.data1">
+      <tr ng-repeat ="item in items.matches">
         <td>{{item.date}}</td>
         <td><table><tr><td>{{items.name}}</td></tr>
 		<tr><td>{{item.team1.name}} vs {{item.team2.name}}</td></tr>
