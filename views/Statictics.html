@@ -1,12 +1,13 @@
 <div class="row" style="background-color:white">
-            <div  align="center" style="margin-top:40px;">
+            <div  align="center" style="margin-top:40px,background-color: white">
 			<table class=table>
           <tr><td>Enter Team Name:</td> <td><input type = "text" id="getTeamname" required ng-model="getTeamname" name="getTeamname"> <span ng-show="getTeamname.$touched && getTeamname.$invalid"></td>	 </tr> 
          <tr><td> Enter Year     :</td><td>  <input type = "year" id="getYear" required   ng-model="getYear"  name="getYear" placeholder="2015-16 & 2016-17"><span ng-show="getYear.$touched &&getYear.$invalid"></td></tr>
 		  </table>
 		  <input type="submit" value="SUBMIT" align="center"  ng-click="thirdCtrl.statsCheck(getTeamname,getYear)">
 		      </div>
-                <div class="col-lg-12" ng-if="getTeamname && getYear">
+			  <div ng-if="getTeamname && getYear" class="col-lg-12">
+                <div class="col-lg-12" >
                    <caption class="text-center">
                    <h3>
                   STAT ANALYSIS 
@@ -28,9 +29,8 @@
                   <th>Win Percentage</th>
 				  <th>Loss Percentage</th>
                   </tr>
-                  </thead>
-                  
-                   <tr>
+        </thead 
+        <tr>
         <td>{{thirdCtrl.playedmatches}}</td>
 		<td>{{thirdCtrl.score}}</td>
 		<td>{{thirdCtrl.wins}}</td>
@@ -39,7 +39,7 @@
 		<td>{{thirdCtrl.winPercent}}</td>
 		<td>{{thirdCtrl.lossPercent}}</td>
       </tr>
-   
-  </table>
+   </table>
+</div
 </div>
 </div>
