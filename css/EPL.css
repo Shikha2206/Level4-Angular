@@ -48,7 +48,7 @@ overflow-y: scroll;
 	width: 150px; 
 	height: 150px;
 }
-td,th
+th
 {
 text-align:center;
 }
