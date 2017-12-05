@@ -60,11 +60,11 @@ myApp.controller("secondController", ['$http','$location','$routeParams',functio
 					}
 					else if (main.score1>main.score2)
 					{
-						main.winner= ""+main.team1+"wins";
+						main.winner= ""+main.team1+" wins";
 						//console.log(main.winner);
 					}
 						else{
-						  main.winner = ""+main.team2+"wins";
+						  main.winner = ""+main.team2+" wins";
                          //console.log(main.winner);						  
 					}
 				}
