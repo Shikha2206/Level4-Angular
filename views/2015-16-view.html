@@ -1,12 +1,5 @@
-<div  ng-controller="mainCtrl" width="30%" height="20%">
-  <select ng-model="selectedItem" ng-options="Type.value as Type.name for Type in Types">
-    <option value="" disabled>Select a type</option>
-  </select>
-  <select ng-if="subItems[selectedItem].length" ng-model="selectedSubItem" ng-options="item.value as item.name for item in subItems[selectedItem]">
-    <option value="" disabled  >Select a item</option>
-  </select>
-  <button type="button" class="btn btn-primary" ng-click="add();" ng-class="isLoading ? 'disabled' : '';">Add
-  </button>
+<div class="container">
+  
 </div>
 <div class="container" ng-controller='firstController as firstCtrl'>
  <caption class="text-center">
@@ -34,6 +27,7 @@
 		<td><table><tr><td><button type="button" class="btn btn-primary btn-md"><a ng-href="#/match/{{ item.team1.name }}/{{ item.team2.name }}/{{ item.date }}">SUMMARY</a></button></td>
       </tr>
 	  </table>
+	  </tr>
     </tbody>
   </table>
 </div>
