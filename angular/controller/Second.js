@@ -1,3 +1,4 @@
+//SecondController to view single match
 myApp.controller("secondController", ['$http','$location','$routeParams',function($http,$location,$routeParams)
 {
 	var main=this;

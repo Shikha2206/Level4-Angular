@@ -1,8 +1,5 @@
 myApp.controller("StatsController",["$http",function($http){
-
       var main = this;
-
-
       this.baseUrl1 = "https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.json";
       this.baseUrl2 = "https://raw.githubusercontent.com/openfootball/football.json/master/2016-17/en.1.json";
       this.data1=0;

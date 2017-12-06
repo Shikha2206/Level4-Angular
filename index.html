@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app='mainApp'>
+<html lang="en" ng-app='mainApp'><!-- Include ng-app for angular app-->
 <head>
   <title>EPL</title>
   <meta charset="utf-8">
@@ -10,7 +10,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body style="background-image: url('images/home.gif')" id="intro-header">
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -22,7 +21,7 @@
       <a class="navbar-brand" href="#">Premier League</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right"> <!-- links for SPA-->
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#/2015-16">2015-16</a></li>
         <li><a href="#/2016-17">2016-17</a></li>
@@ -38,7 +37,7 @@
 	<p><img class="logo img-responsive" src="images/logo.gif" /></p>
     </div>
     <div class="col-sm-10 text-left"> 
-	 <div ng-view></div>
+	 <div ng-view></div><!-- ng-view it would link our view pages to our mainApp-->
     </div>
     </div>
   </div>
