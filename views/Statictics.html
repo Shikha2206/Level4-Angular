@@ -1,8 +1,9 @@
+<!-- It would show stat details for a particular Team-->
 <div class="row" style="background-color: white" style="margin-top:100px">
             <div  align="center">
 			<table class=table>
-          <tr><td>Enter Team Name:</td> <td><input type = "text" id="getTeamname" required ng-model="getTeamname" name="getTeamname"> <span ng-show="getTeamname.$touched && getTeamname.$invalid"></td>	 </tr> 
-         <tr><td> Enter Year     :</td><td>  <input type = "year" id="getYear" required   ng-model="getYear"  name="getYear" placeholder="2015-16 & 2016-17"><span ng-show="getYear.$touched &&getYear.$invalid"></td></tr>
+          <tr><td>Enter Team Name:</td> <td><input type = "text" id="getTeamname" required ng-model="getTeamname" name="getTeamname"> <span ng-show="getTeamname.$touched && getTeamname.$invalid"><span class="help-block">Eg: Enter as <em>Everton</em></td></tr> 
+         <tr><td> Enter Year     :</td><td>  <input type = "year" id="getYear" required   ng-model="getYear"  name="getYear" placeholder="2015-16 & 2016-17"><span ng-show="getYear.$touched &&getYear.$invalid"><span class="help-block">Eg: Enter as <em>2015 or 2016</em></td></tr>
 		  </table>
 		  <input type="submit" value="SUBMIT" align="center"  ng-click="thirdCtrl.statsCheck(getTeamname,getYear)">
 		      </div>
