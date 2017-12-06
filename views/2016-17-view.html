@@ -1,5 +1,18 @@
 <div class="container">
+<caption class="text-center">
+<h3 class="trophy">
+Filter By 
+</h3>
+</caption>
+<table class="table">
 
+<td>Date:</td><td><input type="text" id="name" name="getDate" placeholder="Enter Date" ng-model="getDate">
+<span class="help-block">Enter as<em>YYYY-mm-dd</em></span></td>
+<td>Teamname:</td><td><input type="text" id="name" name="getTeamname" placeholder="Enter Teamname" ng-model="getTeamname">
+<span class="help-block">Eg: Enter as <em>Liverpool</em></span></td>
+<td>Matchday:</td><td><input type="text" id="name" name="getMatchday" placeholder="Enter Matchday" ng-model="getMatchday"><span class="help-block">Eg: Enter as <em>Matchday 1</em></span></td>
+<td>Score:</td><td><input type="text" id="name" name="getScore" placeholder="Enter Score" ng-model="getScore"></td>
+</table>
 </div>
 <div class="container" ng-controller='firstController as firstCtrl'>
  <caption class="text-center">
@@ -14,8 +27,8 @@
         <th>Match Details</th>
         </tr>
     </thead>
-    <tbody ng-repeat ="items in firstCtrl.data2">
-      <tr ng-repeat ="item in items.matches">
+    <tbody ng-repeat ="items in firstCtrl.data2| filter : getMatchday">
+      <tr ng-repeat ="item in items.matches|filter : getDate | filter : getTeamname | filter : getScore">
         <td>{{item.date}}</td>
         <td><table><tr><td>{{items.name}}</td></tr>
 		<tr><td>{{item.team1.name}} vs {{item.team2.name}}</td></tr>
