@@ -1,3 +1,4 @@
+//Stat controller to see statistics of a particular team
 myApp.controller("StatsController",["$http",function($http){
       var main = this;
       this.baseUrl1 = "https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.json";
@@ -5,6 +6,7 @@ myApp.controller("StatsController",["$http",function($http){
       this.data1=0;
 	  this.year1=0;
       this.rounds1 = [];
+	  //declare to reqd variables to show data in our stat-view
       this.code1;
 	  this.playedmatches;
 	  this.score;
@@ -14,6 +16,7 @@ myApp.controller("StatsController",["$http",function($http){
 	  this.winPercent;
 	  this.lossPercent;
 	  this.value=false;
+	  // will make that pass teamname,corresponding year 
           this.teamStats = function(response,data1){ 
            
            main.rounds1 = response.data.rounds; 
@@ -26,7 +29,7 @@ myApp.controller("StatsController",["$http",function($http){
               for(var i in main.rounds1){
 
                 for( var j in main.rounds1[i].matches){
-
+//checking teamname 
                     if (main.rounds1[i].matches[j].team1.name == data1){
                       
                        code1 = main.rounds1[i].matches[j].team1.code;
@@ -81,7 +84,7 @@ myApp.controller("StatsController",["$http",function($http){
 
 
                    
-
+//after that saving all the value in actual variables
                   main.code1= code1;
                   main.playedmatches = playedmatches;
                   main.score = totalscore;
