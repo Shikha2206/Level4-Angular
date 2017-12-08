@@ -1,19 +1,17 @@
 <!--- Making 2016-17 pages that would show all details and by entering matchday,teamname,score,date using ng-repeat to show all elements in our API-->
-<div class="container col-lg-4">
+<div class="col-container">
 <caption class="text-center">
 <h3 class="trophy">
 Filter By 
 </h3>
 </caption>
-<table class="table table-responsive table-condensed">
-
-<td>Date:</td><td><input type="text" id="name" name="getDate" placeholder="Enter Date" ng-model="getDate">
-<span class="help-block">Enter as<em>YYYY-mm-dd</em></span></td>
-<td>Teamname:</td><td><input type="text" id="name" name="getTeamname" placeholder="Enter Teamname" ng-model="getTeamname">
-<span class="help-block">Eg: Enter as <em>Manchester United</em></span></td>
-<td>Matchday:</td><td><input type="text" id="name" name="getMatchday" placeholder="Enter Matchday" ng-model="getMatchday"><span class="help-block">Eg: Enter as <em>Matchday 1</em></span></td>
-<td>Score:</td><td><input type="text" id="name" name="getScore" placeholder="Enter Score" ng-model="getScore"></td>
-</table>
+<div class="col-lg-6">Date:<input type="text" id="name" name="getDate" placeholder="Enter Date" ng-model="getDate">
+<span class="help-block">Enter as<em>YYYY-mm-dd</em></span></div>
+<div class="col-lg-6">Teamname:<input type="text" id="name" name="getTeamname" placeholder="Enter Teamname" ng-model="getTeamname">
+<span class="help-block">Eg: Enter as <em>Manchester United</em></span></div>
+<div class="col-lg-6">Matchday:<input type="text" id="name" name="getMatchday" placeholder="Enter Matchday" ng-model="getMatchday"><span class="help-block">Eg: Enter as <em>Matchday 1</em></span></div>
+<div class="col-lg-6">Score:<input type="text" id="name" name="getScore" placeholder="Enter Score" ng-model="getScore"></div>
+</div>
 </div>
 <div class="container" ng-controller='firstController as firstCtrl'>
  <caption class="text-center">
