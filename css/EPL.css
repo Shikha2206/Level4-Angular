@@ -27,7 +27,9 @@
         padding: 15px;
       }
       .row.content {height:auto;} 
+	  .col{width:auto;}
     }
+	
 #intro-header
 {
  background-color: #777777;
