@@ -28,14 +28,6 @@
       }
       .row.content {height:auto;}
     }
-    }
-	@media screen and (min-width: 767px)
-	{
-	.col { 
-        display: block;
-        width: 100%;
-	}
-	
 #intro-header
 {
  background-color: #777777;
