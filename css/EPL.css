@@ -27,11 +27,14 @@
         padding: 15px;
       }
       .row.content {height:auto;}
-	  .col { 
+    }
+    }
+	@media screen and (min-width: 767px)
+	{
+	.col { 
         display: block;
         width: 100%;
-    }
-    }
+	}
 	
 #intro-header
 {
